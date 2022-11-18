@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int hangman(char RandomWord[30], char Letter, char CorrectLetters[30]);
+int hangman(char initialWord[30], char guess, char CorrectLetters[30]);
 
 int main(void)
 {
