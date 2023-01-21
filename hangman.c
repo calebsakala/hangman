@@ -87,7 +87,7 @@ void main()
       }
     } while (!validInput);
 
-    // This is the loop where the game begins
+    // The game begins: if numberOfTries == 0, the game loop terminates. If quit = 1, the game loop terminates.
     while (numberOfTries && !quit)
     {
 
@@ -137,7 +137,7 @@ void main()
             printf(" You have %d tries left", numberOfTries);
         }
       } else {
-        // Offering the user the chance to see the definition of the word
+        // Offering the user the chance to see the definition of the word in the case that they win
         printf("\n\nPress 'd' to see the definition of the word. Press anything else to skip.\n> ");
         scanf(" %c", &seeDefinition);
 
@@ -148,7 +148,7 @@ void main()
     if (numberOfTries == 0) {
       printf("\n\nYOU LOSE. The word was '%s'! :)", random_word);
       
-      // Offering the user the chance to see the definition of the word
+      // Offering the user the chance to see the definition of the word in the case that they lose
       printf("\n\nPress 'd' to see the definition of the word. Press anything else to skip.\n> ");
       scanf(" %c", &seeDefinition);
 
@@ -156,7 +156,8 @@ void main()
     }
     printf("\n\nPress 'y' if you would like to play again. Press anything else if you would like to quit.\n> ");
     scanf(" %c", &playAgain);
-
+    
+    // Leaving the game
     if (playAgain != 'y' && playAgain != 'Y')
     {
       printf("Thanks for playing!");
