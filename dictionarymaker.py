@@ -15,7 +15,7 @@ def format(dest, string_list):
 		# all types of words must have a colon afterwards
 		# I knew what types of words were in the document as I used easydefine.com for all definitions
 		for word in split_sentence:
-			if word == 'verb' or word == 'noun' or word == 'adj.' or word == 'pron.' or word == 'interj.' or word == 'adv.':
+			if word in ['verb', 'adj.', 'noun', 'pron.', 'interj.', 'adv.']:
 				word += ':'    # A colon is added if the word from the list is a word that describes the grammar/use of other words
 			string += word + ' '
 		formatted_string_list.append(string)  # A formatted list is created to be output
